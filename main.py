@@ -1,6 +1,10 @@
-def main():
-    print("Hello from digi-tionary!")
-
+import uvicorn
+from api.main import app
 
 if __name__ == "__main__":
-    main()
+    uvicorn.run(
+        "api.main:app",
+        host="0.0.0.0",
+        port=8000,
+        reload=True
+    )
